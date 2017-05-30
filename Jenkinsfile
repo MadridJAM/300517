@@ -1,5 +1,6 @@
-@Library('libpipelines@master') _
+@Library('libpipelines@feature/mapConfig') _
 
-config.enabled = true
-def response = action ('pwd')
+def cfg = mapConfig()
+cfg.enabled = true
+def response = action (cfg, 'pwd')
 assert response.contains ('/home/jenkins')
