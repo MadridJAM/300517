@@ -3,3 +3,4 @@
 config.enabled = true
 def response = action ('pwd')
 assert response.contains ('/home/jenkins')
+echo "PR test from fork"
