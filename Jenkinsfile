@@ -1,5 +1,5 @@
-@Library('libpipelines@bug/iterators') _
+@Library('libpipelines@master') _
 
-def cfg = mapConfig()
-cfg.enabled = true
-iterators ([ action (cfg, 'pwd') ])
+def S1 = 'FAI'
+def S2 = "R${-> S1}TH"
+assert "${S2}" == "FAITH"
